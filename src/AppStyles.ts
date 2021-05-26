@@ -38,6 +38,9 @@ export const CartContainer = styled.aside`
     h2{
         text-align: center;
     }
+	p{
+		text-align: center;
+	}
     .amount{
         color: #28ea89;
         font-size: 1.3rem;

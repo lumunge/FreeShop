@@ -27,7 +27,7 @@ const Cart: React.FC<Props> = ({ cartItems, addToCart, removeFromCart }) => {
 					removeFromCart={removeFromCart}
 				/>
 			))}
-			<h4>Payable Amount: <span className="amount"> Ksh {getTotals(cartItems).toFixed(2)}</span></h4>
+			<p>Payable Amount: <span className="amount"> Ksh {getTotals(cartItems).toFixed(2)}</span></p>
 		</>
 	);
 };

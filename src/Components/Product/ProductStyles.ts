@@ -1,13 +1,16 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
     padding: 1rem;
     border-radius: 20px;
 `;
 
 export const ProductWrapper = styled.div`
     display: flex;
+
+    &:hover .tip{
+        display: block;
+    }
 `;
 
 export const ProductImg = styled.div`
