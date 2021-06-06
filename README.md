@@ -14,7 +14,7 @@ and material ui
 
 ### FEATURES
 
-    * Cart Functionality
+    * Cart Functionalities
 
 ### PROJECT SCREENSHOT
 
