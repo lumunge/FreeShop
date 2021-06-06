@@ -37,3 +37,4 @@ const Product: React.FC<Props> = ({ product, addToCart }) => {
 };
 
 export default Product;
+
