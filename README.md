@@ -28,7 +28,7 @@ and material ui
 
 ### HOSTED @
 
-coming soon...
+[FreeShop](https://lumungep12.github.io/FreeShop/)
 
 ### SETUP
 
