@@ -3,7 +3,7 @@ import { useQuery } from "react-query";
 // components
 import Product from "./Components/Product/Product";
 import Cart from "./Components/Cart/Cart";
-import { Drawer } from "@material-ui/core";
+import { Badge, Drawer } from "@material-ui/core";
 import ShoppingCart from "@material-ui/icons/AddShoppingCart";
 // styles
 import { AppWrapper, Products, CartContainer, MainWrapper } from "./AppStyles";
@@ -88,7 +88,9 @@ const App = () => {
 				</Drawer>
         <CartContainer>
 				<Button onClick={() => setCartOpen(true)}>
+          <Badge badgeContent={cartItems.length}>
 					<ShoppingCart />
+          </Badge>
 				</Button>
         </CartContainer>
 				<Products>
