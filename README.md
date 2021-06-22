@@ -20,11 +20,11 @@ and material ui
 
 -   Project Screenshot 1
 
-![Screenshot_20210606_160018](https://user-images.githubusercontent.com/58906058/120925133-aa6c9880-c6c6-11eb-8d63-ce3f5e217deb.png)
+![Screenshot_20210622_150335](https://user-images.githubusercontent.com/58906058/122921401-f6b80980-d351-11eb-8f99-be580dd350ac.png)
 
 -   Project Screenshot 2
 
-![Screenshot_20210606_160028](https://user-images.githubusercontent.com/58906058/120925139-ad678900-c6c6-11eb-8fad-c17960334969.png)
+![Screenshot_20210622_150356](https://user-images.githubusercontent.com/58906058/122921408-f91a6380-d351-11eb-8c0d-4261559d2129.png)
 
 ### HOSTED @
 
