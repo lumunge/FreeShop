@@ -1,5 +1,7 @@
+import { Container, Typography } from "@material-ui/core";
 import { cartItemType } from "../../App";
 import CartItem from "../CartItem/CartItem";
+import {CartHeader} from './CartStyles';
 
 type Props = {
 	cartItems: cartItemType[];
@@ -16,9 +18,14 @@ const Cart: React.FC<Props> = ({ cartItems, addToCart, removeFromCart }) => {
 		);
 
 	return (
-		<>
-			<h2>Shopping Cart Here</h2>
-			{cartItems.length === 0 ? <p>No Items In Cart</p> : null}
+		<Container>
+			<CartHeader>
+				{cartItems.length === 0 ? (
+					<Typography variant="h4">No Items In Cart</Typography>
+				) : (
+					<Typography variant="h4">{cartItems.length} Items</Typography>
+				)}
+			</CartHeader>
 			{cartItems.map((item) => (
 				<CartItem
 					key={item.id}
@@ -27,8 +34,14 @@ const Cart: React.FC<Props> = ({ cartItems, addToCart, removeFromCart }) => {
 					removeFromCart={removeFromCart}
 				/>
 			))}
-			<p>Payable Amount: <span className="amount"> Ksh {getTotals(cartItems).toFixed(2)}</span></p>
-		</>
+			<Typography variant="body1">
+				Payable Amount:{" "}
+				<span className="amount">
+					{" "}
+					Ksh {getTotals(cartItems).toFixed(2)}
+				</span>
+			</Typography>
+		</Container>
 	);
 };
 

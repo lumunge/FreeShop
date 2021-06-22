@@ -30,21 +30,4 @@ export const No = styled.span`
 export const CartContainer = styled.aside`
 	position: fixed;
 	right: 0;
-	top: 0;
-	width: 25%;
-	height: 100vh;
-	overflow: scroll;
-    background-color:  #d7dbdd;
-    h2{
-        text-align: center;
-    }
-	p{
-		text-align: center;
-	}
-    .amount{
-        color: #28ea89;
-        font-size: 1.3rem;
-        padding: 3rem 0;
-        text-decoration: underline;
-    }
 `;
