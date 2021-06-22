@@ -2,6 +2,7 @@ import { cartItemType } from "../../App";
 import { CartItemWrapper } from "./CartItemStyles";
 // icons
 import { FaPlus, FaMinus } from "react-icons/fa";
+import { Typography } from "@material-ui/core";
 
 type Props = {
 	item: cartItemType;
@@ -11,7 +12,7 @@ type Props = {
 
 const CartItem: React.FC<Props> = ({ item, addToCart, removeFromCart }) => (
 	<CartItemWrapper>
-		<h3>{item.title}</h3>
+		<Typography variant="h6">{item.title}</Typography>
 		<div className="item-info">
 			<div className="item-img">
 				<img
@@ -22,8 +23,8 @@ const CartItem: React.FC<Props> = ({ item, addToCart, removeFromCart }) => (
 				/>
 			</div>
 			<div className="item-details">
-				<p>Price: {item.price}</p>
-				<p>Total: {(item.totalAmount * item.price).toFixed(2)}</p>
+				<Typography variant="h6">Price: <span>{item.price}</span></Typography>
+				<Typography variant="h6">Total: <span>{(item.totalAmount * item.price).toFixed(2)}</span></Typography>
 			</div>
 		</div>
 		<div className="action-btns">
