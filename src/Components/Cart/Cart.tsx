@@ -1,5 +1,4 @@
-import { Container, Typography, Button } from "@material-ui/core";
-import Close from '@material-ui/icons/Close';
+import { Container, Typography } from "@material-ui/core";
 import { cartItemType } from "../../App";
 import CartItem from "../CartItem/CartItem";
 import useStyles from './CartStyles';
