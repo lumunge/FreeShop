@@ -1,7 +1,9 @@
-import { Container, Typography } from "@material-ui/core";
+import { Container, Typography, Button } from "@material-ui/core";
+import Close from '@material-ui/icons/Close';
 import { cartItemType } from "../../App";
 import CartItem from "../CartItem/CartItem";
-import {CartHeader, Price} from './CartStyles';
+import useStyles from './CartStyles';
+
 
 type Props = {
 	cartItems: cartItemType[];
@@ -10,6 +12,9 @@ type Props = {
 };
 
 const Cart: React.FC<Props> = ({ cartItems, addToCart, removeFromCart }) => {
+
+	const classes = useStyles();
+
 	//calculating total price
 	const getTotals = (items: cartItemType[]) =>
 		items.reduce(
@@ -19,13 +24,13 @@ const Cart: React.FC<Props> = ({ cartItems, addToCart, removeFromCart }) => {
 
 	return (
 		<Container>
-			<CartHeader>
+			<div className={classes.CartHeader}>
 				{cartItems.length === 0 ? (
 					<Typography variant="h4">No Items In Cart</Typography>
 				) : (
 					<Typography variant="h4">{cartItems.length} Item(s)</Typography>
 				)}
-			</CartHeader>
+			</div>
 			{cartItems.map((item) => (
 				<CartItem
 					key={item.id}
@@ -36,10 +41,10 @@ const Cart: React.FC<Props> = ({ cartItems, addToCart, removeFromCart }) => {
 			))}
 			<Typography variant="h5">
 				Payable Amount:{" "}
-				<Price>
+				<div className={classes.Price}>
 					{" "}
 					Ksh {getTotals(cartItems).toFixed(2)}
-				</Price>
+				</div>
 			</Typography>
 		</Container>
 	);

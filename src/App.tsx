@@ -3,7 +3,7 @@ import { useQuery } from "react-query";
 // components
 import Product from "./Components/Product/Product";
 import Cart from "./Components/Cart/Cart";
-import { Badge, Drawer, Grid, Container, Button } from "@material-ui/core";
+import { Badge, Drawer, Grid, Container, Button, Typography } from "@material-ui/core";
 import ShoppingCart from "@material-ui/icons/AddShoppingCart";
 // styles
 import useStyles from './AppStyles';
@@ -22,6 +22,7 @@ const App = () => {
 	// states
 	const [cartItems, setCartItems] = useState([] as cartItemType[]);
 	const [cartOpen, setCartOpen] = useState(false);
+	const classes = useStyles();
 
 	const fetchProducts = async (): Promise<cartItemType[]> =>
 		await (await fetch("https://fakestoreapi.com/products")).json();
@@ -31,7 +32,7 @@ const App = () => {
 		fetchProducts
 	);
 
-	const classes = useStyles();
+	
 	// adding items to Cart
 	const addToCart = (clicked: cartItemType) => {
 		setCartItems((prevItems) => {
@@ -50,6 +51,7 @@ const App = () => {
 		});
 	};
 
+
 	// removing items from cart
 	const removeFromCart = (id: number) => {
 		setCartItems((prevItems) =>
@@ -67,8 +69,8 @@ const App = () => {
 		);
 	};
 
-	if (isLoading) return <h4>Loading Products....</h4>;
-	if (error) return <h4>An Error Ocurred</h4>;
+	if (isLoading) return <Typography variant="h4">Setting Up Shop...</Typography>;
+	if (error) return <Typography variant="h4" color="secondary">An Error Ocurred</Typography>;
 
 	return (
 		<Container>
