@@ -3,11 +3,10 @@ import { useQuery } from "react-query";
 // components
 import Product from "./Components/Product/Product";
 import Cart from "./Components/Cart/Cart";
-import { Badge, Drawer } from "@material-ui/core";
+import { Badge, Drawer, Grid, Container, Button } from "@material-ui/core";
 import ShoppingCart from "@material-ui/icons/AddShoppingCart";
 // styles
-import { AppWrapper, Products, CartContainer, MainWrapper } from "./AppStyles";
-import { Button } from "./Components/Product/ProductStyles";
+import useStyles from './AppStyles';
 
 //Setting product types
 export type cartItemType = {
@@ -31,8 +30,8 @@ const App = () => {
 		"products",
 		fetchProducts
 	);
-	console.log(data);
 
+	const classes = useStyles();
 	// adding items to Cart
 	const addToCart = (clicked: cartItemType) => {
 		setCartItems((prevItems) => {
@@ -72,9 +71,9 @@ const App = () => {
 	if (error) return <h4>An Error Ocurred</h4>;
 
 	return (
-		<AppWrapper>
+		<Container>
 			<h1>Free Shop</h1>
-			<MainWrapper>
+			<div>
 				<Drawer
 					anchor="right"
 					open={cartOpen}
@@ -86,22 +85,22 @@ const App = () => {
 						removeFromCart={removeFromCart}
 					/>
 				</Drawer>
-        <CartContainer>
-				<Button onClick={() => setCartOpen(true)}>
-          <Badge badgeContent={cartItems.length}>
-					<ShoppingCart />
-          </Badge>
-				</Button>
-        </CartContainer>
-				<Products>
+				<div>
+					<Button onClick={() => setCartOpen(true)} variant="contained" className={classes.cartBtn}>
+						<Badge badgeContent={cartItems.length}>
+							<ShoppingCart />
+						</Badge>
+					</Button>
+				</div>
+				<Grid container spacing={3}>
 					{data?.map((product) => (
-						<div key={product.id}>
+						<Grid item key={product.id} xs={12} md={6}>
 							<Product product={product} addToCart={addToCart} />
-						</div>
+						</Grid>
 					))}
-				</Products>
-			</MainWrapper>
-		</AppWrapper>
+				</Grid>
+			</div>
+		</Container>
 	);
 };
 
