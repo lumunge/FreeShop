@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/FreeShop/static/js/main.ed2de5a1.chunk.js",
-    "main.js.map": "/FreeShop/static/js/main.ed2de5a1.chunk.js.map",
+    "main.js": "/FreeShop/static/js/main.ee2586c5.chunk.js",
+    "main.js.map": "/FreeShop/static/js/main.ee2586c5.chunk.js.map",
     "runtime-main.js": "/FreeShop/static/js/runtime-main.19b8ae89.js",
     "runtime-main.js.map": "/FreeShop/static/js/runtime-main.19b8ae89.js.map",
-    "static/js/2.27e35860.chunk.js": "/FreeShop/static/js/2.27e35860.chunk.js",
-    "static/js/2.27e35860.chunk.js.map": "/FreeShop/static/js/2.27e35860.chunk.js.map",
+    "static/js/2.0e5ca31c.chunk.js": "/FreeShop/static/js/2.0e5ca31c.chunk.js",
+    "static/js/2.0e5ca31c.chunk.js.map": "/FreeShop/static/js/2.0e5ca31c.chunk.js.map",
     "index.html": "/FreeShop/index.html",
-    "static/js/2.27e35860.chunk.js.LICENSE.txt": "/FreeShop/static/js/2.27e35860.chunk.js.LICENSE.txt"
+    "static/js/2.0e5ca31c.chunk.js.LICENSE.txt": "/FreeShop/static/js/2.0e5ca31c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.19b8ae89.js",
-    "static/js/2.27e35860.chunk.js",
-    "static/js/main.ed2de5a1.chunk.js"
+    "static/js/2.0e5ca31c.chunk.js",
+    "static/js/main.ee2586c5.chunk.js"
   ]
 }
