@@ -66,11 +66,11 @@ const App = () => {
 					return [...acc, item];
 				}
 			}, [] as cartItemType[])
-		);
+		);		
 	};
 
 	if (isLoading) return <Typography variant="h4">Setting Up Shop...</Typography>;
-	if (error) return <Typography variant="h4" color="secondary">An Error Ocurred</Typography>;
+	if (error) return <Typography variant="h4" color="secondary">Error while fetching items...</Typography>;
 
 	return (
 		<Container>
