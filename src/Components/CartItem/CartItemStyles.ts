@@ -23,6 +23,12 @@ export default makeStyles(() => ({
 	spanBtns:{
 		border: "1px solid #2a2d3c",
 		padding: "5px 10px",
+		'&:hover':{
+			cursor: "pointer",
+			background: "#2a2d3c",
+			color: "#fff",
+			transition: "all .4s ease-in-out"
+		}
 	}
 }))
 
