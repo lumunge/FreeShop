@@ -1,8 +1,8 @@
 import { cartItemType } from "../../App";
-import { CartItemWrapper } from "./CartItemStyles";
 // icons
 import { FaPlus, FaMinus } from "react-icons/fa";
-import { Typography } from "@material-ui/core";
+import { Typography, Container } from "@material-ui/core";
+import useStyles from './CartItemStyles';
 
 type Props = {
 	item: cartItemType;
@@ -10,11 +10,17 @@ type Props = {
 	removeFromCart: (id: number) => void;
 };
 
-const CartItem: React.FC<Props> = ({ item, addToCart, removeFromCart }) => (
-	<CartItemWrapper>
+
+
+const CartItem: React.FC<Props> = ({ item, addToCart, removeFromCart }) => {
+
+	const classes = useStyles();
+
+	return(
+	<Container className={classes.container}>
 		<Typography variant="h6">{item.title}</Typography>
-		<div className="item-info">
-			<div className="item-img">
+		<div className={classes.itemInfo}>
+			<div>
 				<img
 					src={item.image}
 					alt={item.title}
@@ -22,21 +28,22 @@ const CartItem: React.FC<Props> = ({ item, addToCart, removeFromCart }) => (
 					height="100px"
 				/>
 			</div>
-			<div className="item-details">
-				<Typography variant="h6">Price: <span>{item.price}</span></Typography>
-				<Typography variant="h6">Total: <span>{(item.totalAmount * item.price).toFixed(2)}</span></Typography>
+			<div>
+				<Typography variant="h6">Price: <span className={classes.span}>{item.price}</span></Typography>
+				<Typography variant="h6">Total: <span className={classes.span}>{(item.totalAmount * item.price).toFixed(2)}</span></Typography>
 			</div>
 		</div>
-		<div className="action-btns">
-			<span onClick={() => removeFromCart(item.id)}>
+		<div className={classes.actionBtns}>
+			<span className={classes.spanBtns} onClick={() => removeFromCart(item.id)}>
 				<FaMinus />
 			</span>
 			<p>{item.totalAmount}</p>
-			<span onClick={() => addToCart(item)}>
+			<span className={classes.spanBtns} onClick={() => addToCart(item)}>
 				<FaPlus />
 			</span>
 		</div>
-	</CartItemWrapper>
-);
+	</Container>
+	)
+}
 
 export default CartItem;
