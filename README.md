@@ -28,10 +28,10 @@ and material ui
 
 ### HOSTED @
 
-[FreeShop](https://lumungep12.github.io/FreeShop/)
+[FreeShop](https://lumunge.github.io/FreeShop/)
 
 ### SETUP
 
-    * git clone https://github.com/lumungep12/FreeShop.git
+    * git clone https://github.com/lumunge/FreeShop.git
     * npm i
     * npm start
